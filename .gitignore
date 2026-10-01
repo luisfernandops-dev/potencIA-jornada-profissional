@@ -1,0 +1,20 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Dependências e builds futuros
+node_modules/
+dist/
+.env
+.env.*
+
+# Dados de pesquisa e informações pessoais
+pesquisa/respostas/
+*dados-pessoais*
+*respostas-originais*
+*.xlsx
+*.csv
