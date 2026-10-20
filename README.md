@@ -71,23 +71,22 @@ O protótipo é uma demonstração da proposta, não um serviço de orientação
 
 ### 📸 Telas e apresentação
 
-A apresentação da grande final do CIEE 2026 inclui cinco imagens selecionadas para compor esta documentação:
+As imagens abaixo são **materiais de apresentação e representações visuais do protótipo** usados na grande final do CIEE 2026. Algumas telas ilustram funcionalidades planejadas e não necessariamente implementadas.
 
-| Material | Conteúdo |
-|:--|:--|
-| **Plataforma** | Painel da potencIA e visão da experiência proposta |
-| **Jornada com a Lia** | Relato de experiência e identificação de competências |
-| **Resultados da pesquisa** | Principais números das 40 respostas |
-| **Piloto planejado** | Objetivos da proposta de teste com 50 jovens |
-| **Mensagem final** | Propósito de reconhecer o potencial real |
+#### Conheça a plataforma
+![Visão da plataforma potencIA](plataforma.jpg)
 
-<!-- Imagens selecionadas da apresentação de 8 slides. Após adicioná-las em docs/imagens/, inserir aqui:
-![Conheça a plataforma](docs/imagens/plataforma.jpg)
-![Como funciona a jornada com a Lia](docs/imagens/jornada-lia.jpg)
-![Resultados da pesquisa inicial](docs/imagens/pesquisa.jpg)
-![Piloto planejado com 50 jovens](docs/imagens/piloto-planejado.jpg)
-![Mensagem final da potencIA](docs/imagens/mensagem-final.jpg)
--->
+#### Da experiência real às competências: conheça a Lia
+![Jornada de identificação de competências com a assistente Lia](jornada-lia.jpg)
+
+#### Pesquisa inicial com 40 respostas válidas
+![Resultados agregados da pesquisa inicial da potencIA](pesquisa.jpg)
+
+#### Próximo passo: piloto planejado com 50 jovens
+![Apresentação do piloto planejado da potencIA com 50 jovens](piloto-planejado.jpg)
+
+#### Nosso propósito
+![Mensagem final da potencIA sobre reconhecer o potencial real](mensagem-final.jpg)
 
 ## 📈 Como pretendemos avaliar a evolução
 
