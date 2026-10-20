@@ -1,96 +1,131 @@
-# potencIA | Jornada Profissional
+<div align="center">
 
-**🏆 1º lugar no Prêmio Estagiário Inovador CIEE 2026**
+# ✨ potencIA | Jornada Profissional
 
-> **Potencial não falta. O que muitas vezes falta é uma ferramenta que ajude a lapidá-lo.**
+### Da experiência real ao reconhecimento de competências
 
-A **potencIA** é uma proposta de plataforma que utiliza inteligência artificial para ajudar jovens a **reconhecer competências desenvolvidas em experiências reais**, construir evidências práticas e se preparar melhor para processos seletivos.
+**🏆 1º lugar | Prêmio Estagiário Inovador CIEE 2026**
 
-Projeto idealizado por **Luis Fernando Pereira da Silva**, estudante de Análise e Desenvolvimento de Sistemas.
+**Inteligência Artificial • Desenvolvimento Profissional • Juventude • Inclusão**
+
+> **A potencIA não inventa competências. Ela ajuda o jovem a reconhecer e demonstrar seu potencial real.**
+
+</div>
+
+---
+
+## 💡 Sobre o projeto
+
+A **potencIA** é uma proposta de plataforma web que utiliza inteligência artificial para apoiar jovens no início da vida profissional. A jornada parte de experiências reais, mesmo fora de empregos formais, e ajuda a identificar competências, organizar evidências e preparar apresentações em entrevistas.
+
+O projeto foi criado por **Luis Fernando Pereira da Silva**, estudante de Análise e Desenvolvimento de Sistemas, e conquistou o **1º lugar no Prêmio Estagiário Inovador do CIEE em 2026**, apresentado na EXPO CIEE, em São Paulo.
+
+> **Estágio do projeto:** protótipo demonstrativo e proposta de evolução. As telas de apresentação ilustram a experiência planejada e não representam, necessariamente, funções já integradas ou disponíveis em produção.
 
 ## 🎯 O problema
 
-Experiências escolares, projetos, trabalhos informais e responsabilidades cotidianas também podem desenvolver competências. Porém, muitos jovens têm dificuldade para identificá-las e comunicá-las em entrevistas.
+Muitos jovens realizam atividades em projetos escolares, na comunidade, no comércio familiar ou no dia a dia, mas têm dificuldade para explicar o que aprenderam e como essas vivências se relacionam com o mercado de trabalho.
 
-Em uma **pesquisa inicial com 40 respostas válidas**, realizada para orientar o projeto:
+### 📊 Pesquisa inicial: 40 respostas válidas
 
-| Indicador | Resultado |
-| --- | ---: |
-| Já deixaram de buscar uma oportunidade por insegurança sobre experiências ou competências | **80%** |
-| Acreditam que teriam mais confiança ao demonstrar competências na prática | **87,5%** |
-| Demonstraram interesse em utilizar a potencIA | **77,5%** |
+| Indicador da pesquisa | Resultado |
+|:--|--:|
+| Já deixaram de buscar uma oportunidade por insegurança sobre suas experiências e competências | **80%** |
+| Teriam mais confiança se conseguissem demonstrar competências na prática | **87,5%** |
+| Afirmaram que utilizariam a potencIA | **77,5%** |
 
-*Esses resultados descrevem a percepção dos participantes da pesquisa. Eles não comprovam, por si só, a eficácia da plataforma.*
+**Nota:** são respostas de uma pesquisa exploratória com participantes do projeto. Não comprovam impacto ou eficácia da ferramenta.
 
-## 💡 Como a potencIA funciona
+## 🤖 Como funciona a jornada proposta
 
-A jornada proposta conecta experiências reais a oportunidades de desenvolvimento:
+```mermaid
+flowchart LR
+    A["1. Experiência real"] --> B["2. Perguntas de contexto"]
+    B --> C["3. Competências sugeridas"]
+    C --> D["4. Validação e evidências"]
+    D --> E["5. Entrevista simulada"]
+```
 
-1. **Experiência real:** o jovem relata algo que viveu, dentro ou fora de um emprego formal.
-2. **Contexto:** a assistente faz perguntas sobre o que aconteceu e qual foi a participação do jovem.
-3. **Competências:** a IA sugere habilidades relacionadas ao relato, com explicações.
-4. **Validação e evidências:** o jovem confirma, ajusta ou rejeita as sugestões e responde a atividades práticas.
-5. **Preparação para entrevistas:** a plataforma propõe simulações e orientações para comunicar suas experiências.
+A assistente virtual **Lia** acompanha a proposta de jornada, fazendo perguntas para compreender o papel do jovem nas situações relatadas. A IA **sugere**, mas o jovem **confirma, ajusta ou rejeita** as competências. O objetivo é evitar atribuir qualificações sem base nas experiências.
 
-A assistente virtual **Lia** foi concebida para acompanhar o usuário nessa jornada.
+### Funcionalidades apresentadas no conceito
 
-## ✨ Diferenciais
+- **Descoberta de competências:** identificação orientada a partir de relatos reais.
+- **Entrevista simulada:** preparação para explicar experiências e habilidades.
+- **Currículo inteligente:** organização das competências relevantes para candidaturas.
+- **Plano de evolução:** metas e acompanhamento de desenvolvimento.
+- **Vagas e oportunidades:** uma possibilidade de conexão futura com oportunidades.
 
-- **Experiências verdadeiras:** não pressupõe experiência formal de trabalho.
-- **IA com validação humana:** competências sugeridas precisam fazer sentido para o próprio jovem.
-- **Contexto e evidência:** vai além de gerar uma lista automática de habilidades.
-- **Linguagem acessível:** foco em quem está iniciando a trajetória profissional.
-- **Responsabilidade:** a ferramenta não deve inventar conquistas ou qualificações.
+Essas funcionalidades estão em diferentes etapas de concepção e prototipagem; não devem ser interpretadas como uma plataforma já implantada integralmente.
 
-## 🖥️ Protótipo
+## 🖥️ O protótipo deste repositório
 
-Este repositório documenta um **protótipo demonstrativo**, não uma plataforma comercial pronta para uso em larga escala.
-
-**Tecnologias presentes no protótipo deste repositório:**
+**Tecnologias documentadas no projeto:**
 - HTML5
 - CSS3
 - JavaScript
 
-### Executar localmente
+**Execução local:** baixe ou clone o repositório e abra o arquivo `index.html` no navegador, quando disponível na versão consultada.
 
-1. Baixe ou clone este repositório.
-2. Abra o arquivo `index.html` em seu navegador.
+O protótipo é uma demonstração da proposta, não um serviço de orientação profissional validado em larga escala.
 
-> As integrações de IA e funcionalidades futuras devem ser avaliadas de acordo com o estágio real de implementação. O protótipo não deve ser apresentado como um sistema já validado em produção.
+### 📸 Telas e apresentação
 
-### Imagens do protótipo
+A apresentação da grande final do CIEE 2026 inclui cinco imagens selecionadas para compor esta documentação:
 
-Capturas de tela da interface poderão ser adicionadas aqui, em uma pasta `docs/imagens/`, após a seleção das imagens para divulgação.
+| Material | Conteúdo |
+|:--|:--|
+| **Plataforma** | Painel da potencIA e visão da experiência proposta |
+| **Jornada com a Lia** | Relato de experiência e identificação de competências |
+| **Resultados da pesquisa** | Principais números das 40 respostas |
+| **Piloto planejado** | Objetivos da proposta de teste com 50 jovens |
+| **Mensagem final** | Propósito de reconhecer o potencial real |
 
-## 🏆 Reconhecimento
+<!-- Imagens selecionadas da apresentação de 8 slides. Após adicioná-las em docs/imagens/, inserir aqui:
+![Conheça a plataforma](docs/imagens/plataforma.jpg)
+![Como funciona a jornada com a Lia](docs/imagens/jornada-lia.jpg)
+![Resultados da pesquisa inicial](docs/imagens/pesquisa.jpg)
+![Piloto planejado com 50 jovens](docs/imagens/piloto-planejado.jpg)
+![Mensagem final da potencIA](docs/imagens/mensagem-final.jpg)
+-->
 
-A potencIA conquistou o **1º lugar no Prêmio Estagiário Inovador CIEE 2026**, apresentado durante a **EXPO CIEE 2026**, em São Paulo.
+## 📈 Como pretendemos avaliar a evolução
 
-O reconhecimento valorizou a proposta de usar inteligência artificial para apoiar o desenvolvimento profissional e a empregabilidade dos jovens.
+A proposta inclui um **formulário inicial** para registrar confiança, percepção das próprias competências e preparo para entrevistas; acompanhamento durante o uso; e **formulário final** para comparar as percepções.
+
+O **piloto com 50 jovens é planejado**, com foco em validar a experiência, coletar feedbacks, identificar dificuldades e aprimorar a solução. **Ele ainda não é apresentado como realizado.**
+
+## 🌱 Acesso e sustentabilidade
+
+A visão do projeto é oferecer acesso gratuito aos jovens por meio de uma plataforma web, buscando parcerias com instituições e empresas para apoiar sua continuidade. Uma versão em aplicativo é uma possibilidade futura.
+
+## 🛡️ Privacidade e responsabilidade
+
+- Não publicar dados pessoais ou respostas identificáveis da pesquisa.
+- Permitir que o jovem revise as competências sugeridas.
+- Não inventar experiências, cargos, certificações ou resultados.
+- Tratar a IA como ferramenta de apoio, e não como substituta de profissionais de orientação ou recrutamento.
 
 ## 🛣️ Próximos passos
 
-- Evoluir o protótipo e a experiência de uso.
-- Aperfeiçoar as perguntas de contexto, a identificação e a validação de competências.
-- Estruturar simulações de entrevista e acompanhamento da evolução do jovem.
-- Planejar um **piloto com 50 jovens** para coletar feedbacks e avaliar resultados.
-- Investigar parcerias para manter o acesso gratuito ao público jovem.
+1. Evoluir o protótipo e priorizar as funcionalidades principais.
+2. Aprofundar a validação das competências e das evidências práticas.
+3. Melhorar a simulação de entrevistas.
+4. Planejar e executar o piloto com 50 jovens, mediante cuidados com os dados.
+5. Medir resultados e avaliar parcerias para continuidade.
 
-*O piloto de 50 participantes é uma etapa planejada, não um estudo já realizado.*
-
-## 🔐 Privacidade e uso responsável
-
-A documentação pública não deve conter respostas individuais da pesquisa, nomes, e-mails ou informações pessoais dos participantes. Os dados divulgados aqui são agregados.
-
-A IA é proposta como ferramenta de apoio ao desenvolvimento profissional, e não como substituta de recrutadores ou orientadores.
-
-## 👨‍💻 Autor
+## 👨‍💻 Idealizador
 
 **Luis Fernando Pereira da Silva**
 
-- [GitHub](https://github.com/luisfernandops-dev)
-- [LinkedIn](https://www.linkedin.com/in/luis-fernando-dev06/)
+[GitHub](https://github.com/luisfernandops-dev) · [LinkedIn](https://www.linkedin.com/in/luis-fernando-dev06/)
 
 ---
 
-*Projeto em evolução | potencIA, jornada profissional*
+<div align="center">
+
+**potencIA | Jornada Profissional**
+
+*Porque todo jovem merece uma oportunidade de mostrar do que é capaz.*
+
+</div>
