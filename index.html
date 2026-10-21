@@ -93,9 +93,36 @@
       responsabilidade:{name:'Responsabilidade',icon:'07',why:'A experiência mostra compromisso com pessoas, entregas, horários ou resultados.',challenge:['Crie um plano de compromisso','Defina etapas, prazos e como você verificaria a qualidade de uma entrega.']}
     };
     function go(n){state.screen=n;document.querySelectorAll('.screen').forEach((e,i)=>e.classList.toggle('active',i===n));document.querySelectorAll('.step').forEach((e,i)=>e.classList.toggle('active',i===n));document.querySelector('.app').scrollIntoView({behavior:'smooth',block:'start'});}
-    function detect(text){const t=text.toLowerCase();let keys=['iniciativa','responsabilidade'];if(/pedido|organ|planilha|prazo|estoque|pagamento|tarefa/.test(t))keys.push('organizacao');if(/cliente|mensagem|respon|venda|público|atendi/.test(t))keys.push('atendimento','comunicacao');if(/grupo|equipe|faculdade|escola|colega|família|mãe|pai/.test(t))keys.push('colaboracao');if(/whatsapp|instagram|computador|tecnologia|rede social|excel|canva/.test(t))keys.push('digital');return [...new Set(keys)].slice(0,5)}
+    function detect(text){
+      const t=text.toLowerCase();
+      const keys=[];
+      if(/organiz|planilha|prazo|estoque|agenda|tarefa|planej|controle|pedido/.test(t))keys.push('organizacao');
+      if(/cliente|mensagem|respon|venda|público|atendi|expliquei|apresentei|conversei/.test(t))keys.push('comunicacao');
+      if(/propus|iniciativa|resolvi|criei|melhorei|identifiquei um problema/.test(t))keys.push('iniciativa');
+      if(/grupo|equipe|colaborei|ajudei colegas|dividi tarefas|trabalhamos juntos/.test(t))keys.push('colaboracao');
+      if(/cliente|atendimento|atendi|consumidor/.test(t))keys.push('atendimento');
+      if(/whatsapp|instagram|computador|tecnologia|planilha|excel|canva|site|software/.test(t))keys.push('digital');
+      if(/responsável|responsabilidade|cumpri|entreguei|compromisso|pontual/.test(t))keys.push('responsabilidade');
+      return [...new Set(keys)].slice(0,5);
+    }
     function buildQuestions(){const t=story.value.toLowerCase();const q=[['Você fazia essa atividade com frequência?',['Sim, com frequência','Algumas vezes','Foi uma atividade pontual']],['Você precisava tomar decisões ou resolver problemas?',['Sim','Às vezes','Não']],['Havia alguma entrega ou resultado esperado?',['Sim','Não','Não tenho certeza']]];if(/cliente|mensagem|whatsapp|instagram|venda/.test(t))q.push(['Você conversava diretamente com outras pessoas?',['Sim','Às vezes','Não']]);if(/grupo|equipe|faculdade|escola/.test(t))q.push(['Você ajudou a dividir ou acompanhar tarefas?',['Sim','Parcialmente','Não']]);document.querySelector('#questions').innerHTML=q.map((x,i)=>`<div class="question"><p>${i+1}. ${x[0]}</p><div class="options">${x[1].map((o,j)=>`<label><input type="radio" name="q${i}" value="${o}" ${j===0?'checked':''}><span>${o}</span></label>`).join('')}</div></div>`).join('')}
-    function buildSkills(){state.skills=detect(story.value);document.querySelector('#skills').innerHTML=state.skills.map((k,i)=>{const s=catalog[k];return `<article class="skill"><input aria-label="Confirmar ${s.name}" type="checkbox" value="${k}" checked><div class="icon">${s.icon}</div><h3>${s.name}</h3><p>${s.why}</p></article>`}).join('')}
+    function buildSkills(){
+      state.skills=detect(story.value);
+      const responses=[...document.querySelectorAll('#questions input:checked')].map(input=>({question:input.closest('.question')?.querySelector('p')?.textContent||'',answer:input.value}));
+      const decision=responses.find(r=>r.question.includes('tomar decisões'));
+      const result=responses.find(r=>r.question.includes('entrega ou resultado'));
+      const team=responses.find(r=>r.question.includes('dividir ou acompanhar'));
+      if(decision?.answer==='Sim' && /resol|decidi|propus|tomei iniciativa|melhorei/.test(story.value.toLowerCase()))state.skills.push('iniciativa');
+      if(result?.answer==='Sim' && /entreg|prazo|cumpri|respons/.test(story.value.toLowerCase()))state.skills.push('responsabilidade');
+      if(team?.answer==='Sim' && /equipe|grupo|colega|dividi|ajudei/.test(story.value.toLowerCase()))state.skills.push('colaboracao');
+      state.skills=[...new Set(state.skills)].slice(0,5);
+      const root=document.querySelector('#skills');
+      if(!state.skills.length){
+        root.innerHTML='<p role="status">Ainda não encontramos evidências suficientes para sugerir competências. Volte ao relato e explique o que você fez, como agiu e qual foi o resultado. Não vamos inventar habilidades.</p>';
+        return;
+      }
+      root.innerHTML=state.skills.map(k=>{const skill=catalog[k];return `<article class="skill"><input aria-label="Confirmar ${skill.name}" type="checkbox" value="${k}"><div class="icon">${skill.icon}</div><h3>${skill.name}</h3><p>${skill.why}</p></article>`}).join('');
+    }
     story.addEventListener('input',()=>document.querySelector('#count').textContent=story.value.length);answer.addEventListener('input',()=>document.querySelector('#answerCount').textContent=answer.value.length);
     document.querySelectorAll('[data-example]').forEach(b=>b.addEventListener('click',()=>{story.value=b.dataset.example;story.dispatchEvent(new Event('input'));story.focus()}));
     document.querySelector('#analyze').addEventListener('click',()=>{if(story.value.trim().length<20){document.querySelector('#storyError').classList.add('show');return}document.querySelector('#storyError').classList.remove('show');buildQuestions();go(1)});
